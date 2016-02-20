@@ -1,0 +1,96 @@
+Equilateral, Small, No, 1, 1, 1 
+Isosceles, Small, No, 1, 1, 1 
+Isosceles, Large, No, 1, 59, 59 
+Isosceles, Small, Yes, 1, 40, 40 
+Isosceles, Small, Yes, 1, 20, 20 
+Square, Small, No, 1, 1, 1, 1 
+Rectangle, Large, No, 1, 59, 1, 59 
+Ellipse, Small, Yes, 1, 40 
+Circle, Small, No, 1, 1 
+Line, Small, No, 1 
+Isosceles, Large, No, 99, 59, 59 
+Scalene, Large, Yes, 99, 59, 50 
+Ellipse, Large, Yes, 99, 20 
+Line, Small, No, 99 
+Isosceles, Large, Yes, 100, 59, 59 
+Scalene, Large, Yes, 100, 59, 50 
+Ellipse, Large, Yes, 100, 1 
+Line, Small, Yes, 100 
+Isosceles, Large, No, 101, 59, 59 
+Scalene, Large, Yes, 101, 59, 50 
+Ellipse, Large, No, 101, 59 
+Line, Large, No, 101 
+Equilateral, Large, No, 59, 59, 59 
+Isosceles, Large, No, 59, 59, 1 
+Isosceles, Large, Yes, 59, 40, 59 
+Isosceles, Large, Yes, 59, 59, 40 
+Isosceles, Large, Yes, 59, 59, 50 
+Isosceles, Large, Yes, 59, 59, 20 
+Scalene, Large, Yes, 59, 20, 40 
+Scalene, Large, Yes, 59, 40, 50 
+Scalene, Large, Yes, 59, 40, 20 
+Square, Large, No, 59, 59, 59, 59 
+Rectangle, Large, Yes, 59, 20, 59, 20 
+Ellipse, Large, Yes, 59, 20 
+Circle, Large, No, 59, 59 
+Line, Small, No, 59 
+Equilateral, Large, Yes, 40, 40, 40 
+Isosceles, Small, Yes, 40, 40, 1 
+Isosceles, Large, Yes, 40, 59, 59 
+Isosceles, Small, Yes, 40, 1, 40 
+Isosceles, Large, Yes, 40, 40, 50 
+Isosceles, Small, Yes, 40, 40, 20 
+Scalene, Large, Yes, 40, 20, 59 
+Scalene, Large, Yes, 40, 20, 50 
+Scalene, Large, Yes, 40, 59, 20 
+Square, Large, Yes, 40, 40, 40, 40 
+Rectangle, Large, Yes, 40, 20, 40, 20 
+Ellipse, Small, Yes, 40, 1 
+Circle, Large, Yes, 40, 40 
+Line, Small, Yes, 40 
+Equilateral, Small, Yes, 20, 20, 20 
+Isosceles, Small, Yes, 20, 20, 1 
+Isosceles, Large, Yes, 20, 59, 59 
+Isosceles, Small, Yes, 20, 40, 40 
+Isosceles, Small, Yes, 20, 1, 20 
+Scalene, Large, Yes, 20, 40, 59 
+Scalene, Large, Yes, 20, 59, 40 
+Scalene, Large, Yes, 20, 40, 50 
+Square, Small, Yes, 20, 20, 20, 20 
+Rectangle, Large, Yes, 20, 40, 20, 40 
+Ellipse, Small, Yes, 20, 1 
+Circle, Small, Yes, 20, 20 
+Line, Small, Yes, 20 
+Isosceles, Large, No, 59, 1, 59 
+Rectangle, Large, No, 59, 1, 59, 1 
+Rectangle, Small, Yes, 40, 1, 40, 1 
+Rectangle, Small, Yes, 20, 1, 20, 1 
+Rectangle, Large, Yes, 40, 59, 40, 59 
+Rectangle, Large, Yes, 20, 59, 20, 59 
+Rectangle, Small, Yes, 1, 40, 1, 40 
+Rectangle, Large, Yes, 59, 40, 59, 40 
+Rectangle, Small, Yes, 1, 20, 1, 20 
+Isosceles, Large, Yes, 59, 20, 59 
+Isosceles, Small, Yes, 40, 20, 40 
+Ellipse, Large, No, 99, 1 
+Ellipse, Large, No, 101, 1 
+Ellipse, Large, No, 59, 1 
+Ellipse, Large, No, 1, 59 
+Ellipse, Large, No, 99, 59 
+Ellipse, Large, Yes, 100, 59 
+Ellipse, Large, Yes, 40, 59 
+Ellipse, Large, Yes, 20, 59 
+Scalene, Large, Yes, 40, 59, 50 
+Scalene, Large, Yes, 20, 59, 50 
+Ellipse, Large, Yes, 99, 40 
+Ellipse, Large, Yes, 100, 40 
+Ellipse, Large, Yes, 101, 40 
+Ellipse, Large, Yes, 59, 40 
+Ellipse, Small, Yes, 20, 40 
+Isosceles, Large, Yes, 40, 40, 59 
+Isosceles, Large, Yes, 59, 40, 40 
+Ellipse, Small, Yes, 1, 20 
+Ellipse, Large, Yes, 100, 20 
+Ellipse, Large, Yes, 101, 20 
+Ellipse, Small, Yes, 40, 20 
+Scalene, Large, Yes, 59, 20, 50 
