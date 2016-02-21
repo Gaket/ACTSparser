@@ -17,8 +17,6 @@ public class ACTSParser {
     private final int NUMBER_OF_PARAMETERS = 7;
     private String formattedACTS = null;
 
-
-
     public static List<String> fileList(String directory) {
         List<String> fileNames = new ArrayList<>();
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(directory))) {
@@ -67,32 +65,31 @@ public class ACTSParser {
     }
 
     public void createJUnitTestFile(List<String> fileNames) throws IOException {
-        StringBuffer jUnitText = new StringBuffer();
+        StringBuilder jUnitText = new StringBuilder();
         jUnitText.append(header);
 
         int testCaseNum = 0;
         for (String fileName : fileNames) {
-            jUnitText.append("\n\n" +
-                    "// File: " +
-                    fileName +
-                    "\n\n");
+            jUnitText.append("\n\n" + "// File: ")
+                    .append(fileName)
+                    .append("\n\n");
             readAndConvertData(fileName);
             BufferedReader reader = new BufferedReader(new StringReader(formattedACTS));
             String line;
             boolean good = fileName.contains("Bad") ? false:true;
 
             while ((line = reader.readLine()) != null) {
-                jUnitText.append("    @Test\n" +
-                        "    public void testcase" +
-                        testCaseNum++ +
-                        "() throws Exception {\n" +
-                        "    ShapeClassifier classifier = new ShapeClassifier();\n" +
-                        "    assertEquals(\"" +
-                        (good ? "Yes" : "No") +
-                        "\", classifier.evaluateGuess(\"" +
-                        line +
-                        "\"));\n" +
-                        "}\n\n");
+                jUnitText.append("    @Test\n" + "    public void")
+                        //.append("testcase" + testCaseNum++)
+                        .append(fileName.replace(",","COMMA"))
+                        .append("() throws Exception {\n")
+                        .append("    ShapeClassifier classifier = new ShapeClassifier();\n")
+                        .append("    assertEquals(\"")
+                        .append(good ? "Yes" : "No")
+                        .append("\", classifier.evaluateGuess(\"")
+                        .append(line)
+                        .append("\"));\n")
+                        .append("}\n\n");
             }
 
         }
