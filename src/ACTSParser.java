@@ -79,9 +79,12 @@ public class ACTSParser {
             boolean good = fileName.contains("Bad") ? false:true;
 
             while ((line = reader.readLine()) != null) {
-                jUnitText.append("    @Test\n" + "    public void")
+                jUnitText.append("    @Test\n" + "    public void ")
                         //.append("testcase" + testCaseNum++)
-                        .append(fileName.replace(",","COMMA"))
+                        .append("testcase_")
+                        .append(good ? "Yes" : "No")
+                        .append("GUESS")
+                        .append(line.replace(",","COMMA"))
                         .append("() throws Exception {\n")
                         .append("    ShapeClassifier classifier = new ShapeClassifier();\n")
                         .append("    assertEquals(\"")
