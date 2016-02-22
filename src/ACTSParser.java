@@ -140,10 +140,10 @@ public class ACTSParser {
 
     private String header = "package analysis;\n" +
             "\n" +
-            "import junit.framework.TestCase;\n" +
             "import org.junit.Test;\n" +
+            "import static junit.framework.TestCase.assertEquals;\n" +
             "\n" +
-            "public class ShapeClassifierTest extends TestCase {\n "
+            "public class ShapeClassifierTest  {\n "
             ;
 
     private String finish = "}\n";
