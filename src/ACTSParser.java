@@ -46,7 +46,7 @@ public class ACTSParser {
         String currentLine;
 
         while ((currentLine = reader.readLine()) != null) {
-            if (currentLine.contains("Value1")) {
+            if (currentLine.contains("Value1,Value2,Value3")) {
                 break;
             }
         }
@@ -82,6 +82,7 @@ public class ACTSParser {
                 jUnitText.append("    @Test\n" + "    public void ")
                         //.append("testcase" + testCaseNum++)
                         .append("testcase_")
+                        .append(testCaseNum++)
                         .append(good ? "Yes" : "No")
                         .append("GUESS")
                         .append(line.replace(",","COMMA"))
