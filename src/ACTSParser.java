@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,7 +22,7 @@ public class ACTSParser {
             for (Path path : directoryStream) {
                 fileNames.add(path.toString());
             }
-        } catch (IOException ex) {}
+        } catch (IOException ignored) {}
         return fileNames;
     }
 
@@ -76,29 +75,36 @@ public class ACTSParser {
             readAndConvertData(fileName);
             BufferedReader reader = new BufferedReader(new StringReader(formattedACTS));
             String line;
-            boolean good = fileName.contains("Bad") ? false:true;
+            boolean good = !fileName.contains("Bad");
 
             while ((line = reader.readLine()) != null) {
-                jUnitText.append("    @Test\n" + "    public void ")
-                        //.append("testcase" + testCaseNum++)
-                        .append("testcase_")
-                        .append(testCaseNum++)
-                        .append(good ? "Yes" : "No")
-                        .append("GUESS")
-                        .append(line.replace(",","COMMA"))
-                        .append("() throws Exception {\n")
-                        .append("    ShapeClassifier classifier = new ShapeClassifier();\n")
-                        .append("    assertEquals(\"")
-                        .append(good ? "Yes" : "No")
-                        .append("\", classifier.evaluateGuess(\"")
-                        .append(line)
-                        .append("\"));\n")
-                        .append("}\n\n");
+                jUnitText.append(createOneTestCase(testCaseNum, line, good));
+                testCaseNum++;
             }
 
         }
         jUnitText.append(finish);
         writeToFile(jUnitText.toString(), JUnitFile);
+    }
+
+    private String createOneTestCase(int testCaseNum, String line, boolean good) {
+        StringBuilder testCase = new StringBuilder();
+        testCase.append("    @Test\n" + "    public void ")
+                //.append("testcase" + testCaseNum++)
+                .append("testcase_")
+                .append(testCaseNum)
+                .append(good ? "Yes" : "No")
+                .append("GUESS")
+                .append(line.replace(",","COMMA"))
+                .append("() throws Exception {\n")
+                .append("    ShapeClassifier classifier = new ShapeClassifier();\n")
+                .append("    assertEquals(\"")
+                .append(good ? "Yes" : "No")
+                .append("\", classifier.evaluateGuess(\"")
+                .append(line)
+                .append("\"));\n")
+                .append("}\n\n");
+        return testCase.toString();
     }
 
     private String parseOneLine(String line) {
